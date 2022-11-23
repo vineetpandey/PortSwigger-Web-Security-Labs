@@ -7,12 +7,7 @@ Follow below links for learning the XSS variants along with the associated labs:
 
 
 For specific XSS Apprentice labs, click following repository links to view exploits!
-- xss_apprentice_01 - 
-| #  | Lab  | Repo  |   |   |
-|---|---|---|---|---|
-|  1 |  [Lab: Reflected XSS into HTML context with nothing encoded]() |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+
 
 | #  | Lab  | Repo  |   |   |
 |:-:|:-:|:-:|---|---|
