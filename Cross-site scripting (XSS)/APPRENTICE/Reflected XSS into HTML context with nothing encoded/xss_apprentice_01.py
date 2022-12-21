@@ -11,7 +11,7 @@ requests.packages.urllib3.disable_warnings()
 
 if __name__ == "__main__":
     try:
-        base_url = sys.argv[1].strip()
+        base_url = sys.argv[1].strip().rstrip('/')
     except Exception:
         print("[-] Usage: %s <url>" % sys.argv[0])
         print('[-] Example: %s www.example.com' % sys.argv[0])

