@@ -9,7 +9,7 @@ requests.packages.urllib3.disable_warnings()
 # Determine proxy details to intercept the request within the burp proxy
 # requests.proxies = {'http':'127.0.0.1:8080', 'https':'127.0.0.1:8080'}
 
-# whether problem has already been solved ???
+# whether problem has been solved ???
 def is_Solved(base_url):
     check_request = requests.get(base_url)
     response = check_request.text
