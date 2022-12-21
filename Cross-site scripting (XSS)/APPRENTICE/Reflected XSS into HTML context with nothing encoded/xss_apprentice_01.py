@@ -9,7 +9,7 @@ requests.packages.urllib3.disable_warnings()
 # Determine proxy details to intercept the request within the burp proxy
 # requests.proxies = {'http':'127.0.0.1:8080', 'https':'127.0.0.1:8080'}
 
-# method to check whether problem has already been solved
+# check whether problem has been solved
 def is_Solved(base_url):
     check_request = requests.get(base_url)
     response = check_request.text
@@ -23,7 +23,7 @@ def is_Solved(base_url):
     else:
         return True
 
-# method for validating the payload
+# validating the payload
 def send_exploit(base_url, payload_list):
     print("Payload List:", payload_list)
     for exploit_payload in payload_list:
