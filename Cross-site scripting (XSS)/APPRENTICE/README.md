@@ -1,6 +1,6 @@
-# PortSwigger Web Security Labs - XSS (Cross-site scripting)
+# *PortSwigger Web Security Labs - XSS (Cross-site scripting)*
 
-### XSS Apprentice labs
+### *XSS Apprentice labs*
 
 
 | #  | Lab  | Repo  | Notes  |
